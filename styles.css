@@ -1,0 +1,21 @@
+body {background-image: url(type.png);
+	  font-family: 'Old Standard TT', serif;}
+
+.container {background-image: url(notebook.png);
+			width: 600px;
+			height: 100%;
+			padding: 20px;
+			border-style: solid;
+			border-color: black;
+			border-radius: 3px;
+			border-width: 1px;
+			margin: 150px auto;
+			}
+
+#profile {
+    float: left;
+    margin-right: 10px;
+}
+
+ul {list-style: none;}
+
