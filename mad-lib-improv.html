@@ -52,13 +52,20 @@
         ];
 
         for (var i = 0; i < placeholders.length; i++) {
-        	var id = placeholders[i];
-        	var span = document.getElementById(id);
-        	var word = prompt(' Please enter a(n) ')
-        	span.innerHTML = word;
-        }
+		    var id = placeholders[i];
+		    var span = document.getElementById(id);
+		    span.addEventListener('click', replaceWord, false);
 
+		}
 
+		function replaceWord(e) {
+		    var span = e.target;
+		    var word = prompt('Please enter a ' + span.innerHTML);
+		    if (word !== null) {
+		        // Only replace if word *is not* null
+		        span.innerHTML = word;
+		    	}
+		}
 
 
 
