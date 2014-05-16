@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>What kind of Donut are you?</title>
+        <style>
+
+        body {
+            font: 22px/32px helvetica, sans-serif;
+        }
+
+        span {
+            background: green;
+        }
+
+        #donuts {
+            border: solid 2px red;
+        }
+
+        </style>
+    </head>
+    <body>
+        <p>My name is <span id="name">(name)</span> and my favorite color is <span id="color">(color)</span>.
+        Though I listen to all kinds, my favorite genre of music is <span id="genre">(music genre)</span>. If I found a million dollars I would buy a <span id="purchase">(purchase)</span>, and if I could quit school now and do anything I wanted I would <span id="activity">(activity)</span>.
+       
+        <div id="donuts"> </div>
+        
+        <script>
+
+        var questions = [
+        'name',
+        'color',
+        'genre',
+        'purchase',
+        'activity',
+        ];
+        var input = '';
+        for (var i = 0; i < questions.length; i++) {
+        var id = questions[i];
+        var span = document.getElementById(id);
+        var word = prompt('Please enter a ' + span.innerHTML);
+        input += word;
+        span.innerHTML = word;
+}
+        var num = input.length % 10 + 1;
+        // console.log (num);
+        var div = document.getElementById('donuts')
+        div.innerHTML = '<img src = "donuts/'+ num + '.jpeg">';
+
+        </script>
+    </body>
+</html>
