@@ -10,12 +10,15 @@
         }
 
         span {
-            background: green;
+            border-bottom: dotted 2px black
         }
 
         #donuts {
             border: solid 2px red;
         }
+
+        #donut {width: 300px;
+                height: auto;}
 
         </style>
     </head>
@@ -45,7 +48,15 @@
         var num = input.length % 10 + 1;
         // console.log (num);
         var div = document.getElementById('donuts')
-        div.innerHTML = '<img src = "donuts/'+ num + '.jpeg">';
+        div.innerHTML = '<img id="donut" src = "donuts/'+ num + '.jpeg">';
+
+        // function resizeImage() {
+        // var image = document.getElementById(donut);
+        // var ratio = image.width / image.height;
+        // var width = 500px
+        // var height = width / ratio;
+        
+// }
 
         </script>
     </body>
