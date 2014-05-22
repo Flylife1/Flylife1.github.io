@@ -6,7 +6,7 @@
         <style>
 
         body {
-            font: 19px/27px helvetica, sans-serif; background-color: #9ce284;
+            font: 19px/27px helvetica, sans-serif; background-color: white;
         }
 
         span {
@@ -21,35 +21,39 @@
                 height: auto;
                 margin: 0 18%;}
 
-        /*ul {text-align: center;}*/
+
+
+        .head {text-align: center; font: 30px Bodoni, sans-serif; }
+
+        .sub-head {text-align: center;}
 
         </style>
     </head>
     <body>
-        <p> Sometimes the rigors of being a student and paying the bills leaves you with little time to take care of the one person that counts more than anything or anyone else: yourself. Well, let's not wait until we're in the twilight of our years to do what we've always wanted to do. Let's start that bucket list now.  Cost? No problem. Time? No problem? 
+        <p class= "head"> Bucket List Generator for the Busy Student </P> 
 
-        <p> Just tell us a little about yourself and we'll take care of the rest</p>
+        <p class="sub-head"> Just tell us a little about yourself and we'll take care of the rest</p>
 
         
             <ul>
-            <li>Nickname<span id="name"> </span> </li>
-            <li>Dogs or cats?<span id="pet"> </span>
-            <li>Full-time or part time student?<span id="student"> </span> </li>
-            <li>What kind of donut are you?<span id="donut"> </span> </li>
-            <li>What is your major?<span id="major"> </span> </li>
-            <li>What is your occupation? <span id="job"> </span> </li>
-            <li>What is your biggest fear? <span id="fear"> </span> </li>
-            <li>Who is the one person you'd like to meet, dead or alive? <span id="person"> </span> </li>
-            <li>Are you a seven day vacationer or a fourteen dayer? <span id="days"> </span> </li>
-            <li>How many people would be going with you? <span id="party"> </span> </li>
-            <li>What is your favorite science? <span id="science"> </span> </li>
-            <li>Are you salaried or hourly employee? <span id="job"> </span> </li>
-            <li>Are you single? <span id="status"> </span> </li>
-            <li>Are you scared of heights? <span id="heights"></span> </li>
-            <li>Who's your favorite author? <span id="author"></span> </li>
-            <li>Do you bite your nails? <span id="nails"> </span> </li>
+            <li>Nickname<span id="name">_______________________ </span> </li>
+            <li>Dogs or cats?<span id="pet">_______________________ </span>
+            <li>Full-time or part time student?<span id="student">_______________________ </span> </li>
+            <li>What kind of donut are you?<span id="donut">_______________________ </span> </li>
+            <li>What is your major?<span id="major">_______________________ </span> </li>
+            <li>What is your occupation? <span id="job">_______________________ </span> </li>
+            <li>What is your biggest fear? <span id="fear">_______________________ </span> </li>
+            <li>Who is the one person you'd like to meet, dead or alive? <span id="person">_______________________ </span> </li>
+            <li>Are you a seven day vacationer or a fourteen dayer? <span id="days">_______________________ </span> </li>
+            <li>How many people would be going with you? <span id="party">_______________________ </span> </li>
+            <li>What is your favorite science? <span id="science">_______________________ </span> </li>
+            <li>Are you salaried or hourly employee? <span id="job">_______________________ </span> </li>
+            <li>Are you single? <span id="status">_______________________ </span> </li>
+            <li>Are you scared of heights? <span id="heights">__________________</span> </li>
+            <li>Who's your favorite author? <span id="author">__________________</span> </li>
+            <li>Do you bite your nails? <span id="nails">_______________________ </span> </li>
             <li>If there was a fire in your apartment what's the first thing you would grab? <span id="fire"></span> </li>
-            <li>Would you rather be trapped with a lion or with a shark? <span id="lion"> </span> </li>
+            <li>Would you rather be trapped with a lion or with a shark? <span id="lion">_______________________ </span> </li>
         </ul>
 
 
@@ -85,7 +89,7 @@
         for (var i = 0; i < questions.length; i++) {
         var id = questions[i];
         var span = document.getElementById(id);
-        var word = prompt('Please enter a ' + span.innerHTML);
+        var word = prompt('answer each question');
         input += word;
         span.innerHTML = word;
 }
