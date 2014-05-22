@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Slideshow</title>
+        <style>
+        body {
+            margin: 0;
+    }
+    </style>
+    </head>
+    <body>
+        <div id="photo"></div>
+        <script src="jquery-1.11.0.js"></script>
+         <script src="flickr.js"></script>
+         <script>
+
+         var flickr = new Flickr('8e293eb5bc01282cc363187cfb4c954a');
+
+         flickr.photos.search({
+            text: "graffiti", 
+            lat: "40.416775", 
+            lon: "-3.703790",
+            extras: "o_dims"
+            
+         },  function(rx) {
+           var images = rx.photos.photo;
+           var num = 0;
+           var max = images.length -1;
+           console.log(images[num]);
+           $('#photo').html('<img src="' + images[num].src() + '">');
+            
+            function nextOne(){
+                var image = images[num];
+                this.src = image.src;
+                resizeImage();
+
+
+            /*Beginning of count*/
+            $('#photo').fadeOut(600, function(){
+                num++;
+                if (num > max){ 
+                    num = 0;
+                }
+
+            $('#photo').html('<img src="' + images[num].src() + '">');
+            resizeImage();
+            $('#photo').fadeIn(600);
+            });
+    }
+            /*End of count*/
+
+            $(window).resize(resizeImage);
+
+            $('#photo').click(nextOne);
+
+            function resizeImage() {
+                var image= images [num];
+                var ratio= image.o_width / image.o_height;
+                var width= $(window).width();
+                var height= width / ratio;
+                $('#photo img').css('width', width);
+                $('#photo img').css('height', height);
+            }
+         })
+       
+
+        
+          
+        
+
+
+
+
+            </script>
+    </body>
+</html>
+
